@@ -1,70 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plivački klub Pošk</title>
-    <link rel="icon" type="image/jpg" href="slike/title-icon/2.png">
-    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/grid.css" rel="stylesheet" type="text/css">
-    <link href="stil.css" rel="stylesheet" type="text/css">
-    <link href="mediaq.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400&amp;subset=greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="slike/title-icon/2.png" />
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/grid.css" rel="stylesheet" type="text/css" />
+    <link href="stil.css" rel="stylesheet" type="text/css" />
+    <link href="mediaq.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400&amp;subset=greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i&amp;subset=latin-ext,vietnamese"
+      rel="stylesheet"
+    />
 
-   
-    <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
-   
-   
-   
-   <!--[ contact form script ]-->
-   <script>
-function _(id){ return document.getElementById(id); }
-function submitForm(){
-	_("mybtn").disabled = true;
-	_("status").innerHTML = 'please wait ...';
-	var formdata = new FormData();
-	formdata.append( "n", _("n").value );
-	formdata.append( "e", _("e").value );
-	formdata.append( "m", _("m").value );
-    formdata.append( "id", _("id").value );
-    formdata.append( "tel", _("tel").value );
-    formdata.append( "gd", _("gd").value );
-    formdata.append( "pn", _("pn").value );
-    formdata.append( "pr", _("pr").value );
-	var ajax = new XMLHttpRequest();
-	ajax.open( "POST", "example_parser.php" );
-	ajax.onreadystatechange = function() {
-		if(ajax.readyState == 4 && ajax.status == 200) {
-			if(ajax.responseText == "success"){
-				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
-			} else {
-				_("status").innerHTML = ajax.responseText;
-				_("mybtn").disabled = false;
-			}
-		}
-	}
-	ajax.send( formdata );
-}
-</script>
-   
-   
-</head>
-<body id="pocetna">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
 
+    <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet" />
 
-<!-----------------[ header]----------------->
-  
+    <!--[ contact form script ]-->
+    <script>
+      function _(id) {
+        return document.getElementById(id);
+      }
+      function submitForm() {
+        _("mybtn").disabled = true;
+        _("status").innerHTML = "please wait ...";
+        var formdata = new FormData();
+        formdata.append("n", _("n").value);
+        formdata.append("e", _("e").value);
+        formdata.append("m", _("m").value);
+        formdata.append("id", _("id").value);
+        formdata.append("tel", _("tel").value);
+        formdata.append("gd", _("gd").value);
+        formdata.append("pn", _("pn").value);
+        formdata.append("pr", _("pr").value);
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "example_parser.php");
+        ajax.onreadystatechange = function () {
+          if (ajax.readyState == 4 && ajax.status == 200) {
+            if (ajax.responseText == "success") {
+              _("my_form").innerHTML =
+                "<h2>Thanks " +
+                _("n").value +
+                ", your message has been sent.</h2>";
+            } else {
+              _("status").innerHTML = ajax.responseText;
+              _("mybtn").disabled = false;
+            }
+          }
+        };
+        ajax.send(formdata);
+      }
+    </script>
+  </head>
+  <body id="pocetna">
+    <!-----------------[ header]----------------->
+
     <nav>
       <div class="menu-icon">
         <i class="ion-navicon-round"></i>
       </div>
       <div class="logo">
-        <a href="#pocetna"><img src="slike/title-icon/2.png"></a>
+        <a href="#pocetna"><img src="slike/title-icon/2.png" /></a>
       </div>
       <div class="menu">
         <ul>
@@ -76,382 +96,461 @@ function submitForm(){
           <li><a href="#galerija" class="cool-link">Galerija</a></li>
         </ul>
       </div>
-    </nav>    
- <header>
-          
-         
-      
-       
-       
-       
-       
-        
-        <div class="naslov"> 
-           <h1>Plivački klub POŠK</h1>      
-            <h2>Postani <span>plivač</span> !</h2>
-            <a href="#obuka" class="botun botun_saznajte">Saznajte više</a> 
-        </div>
-     
-        
-        
+    </nav>
+    <header>
+      <div class="naslov">
+        <h1>Plivački klub POŠK</h1>
+        <h2>Postani <span>plivač</span> !</h2>
+        <a href="#obuka" class="botun botun_saznajte">Saznajte više</a>
+      </div>
     </header>
 
-<!-----------------[ section upisi ]----------------->
-<section class="upisi clearfix" id="grupe">
-    
-    <div class="row">
-    <h2>Grupe</h2>
-    </div>
-    
-    <div class="upisi-xl clearfix">
-       <div class="row">
-          
-           <div class="col span_4_of_12_2">
-           <div class="box">
-           <h3 class="radius">NEPLIVAČI</h3>   
-           <img src="slike/upisi/papaline.jpg" class="upisiimg">
-           <div class="okvir">
-               <p>Upišite svoje dijete u najbolju školu plivanja u gradu.<br>Javite se trenerici <strong>Đini</strong> na broj : <br><strong>091 111 11</strong></p>
-           </div>   
-           </div>
-           </div>
-           
-           
-           <div class="col span_4_of_12_2">
-           <div class="box">
-           <h3 class="radius">PAPALINE</h3>
-           <img src="slike/upisi/neplivaci.jpg" class="upisiimg">
-           <div class="okvir">
-           <p>Početna skupina koja slijedi nakon obuke neplivača.<br>Uče se osnove plivanja.<br>Javite se trenerici <strong>Đini</strong> na broj: <br><strong>091 111 11</strong></p>
-           </div>
-           </div>
-           </div>
-           
-           
-           <div class="col span_4_of_12_2">
-           <div class="box">
-           <h3 class="radius">OSTALI</h3>
-           <img src="slike/upisi/ostali.jpg" class="upisiimg">
-           <div class="okvir">
-           <p>Za sve ostale informacije vezane o upisima i drugim grupama javite se na broj <br><strong>091 111 11</strong></p>
-           </div>
-           </div>
-           </div>
-           
-        
-       </div>
-        
-    </div>
-    
-</section>
-<!-----------------[ povijest kluba ]----------------->
+    <!-----------------[ section upisi ]----------------->
+    <section class="upisi clearfix" id="grupe">
+      <div class="row">
+        <h2>Grupe</h2>
+      </div>
 
-<section class="povijest clearfix" id="povijest">
-      
-       <div class="clearfix povijest-xl">
-       <div class="row">
-       
-        <div class="col span_2_of_12">
-        <img src="slike/duje_d_2.jpg" class="draganja">
+      <div class="upisi-xl clearfix">
+        <div class="row">
+          <div class="col span_4_of_12_2">
+            <div class="box">
+              <h3 class="radius">NEPLIVAČI</h3>
+              <img src="slike/upisi/papaline.jpg" class="upisiimg" />
+              <div class="okvir">
+                <p>
+                  Upišite svoje dijete u najbolju školu plivanja u gradu.<br />Javite
+                  se trenerici <strong>Đini</strong> na broj : <br /><strong
+                    >091 111 11</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col span_4_of_12_2">
+            <div class="box">
+              <h3 class="radius">PAPALINE</h3>
+              <img src="slike/upisi/neplivaci.jpg" class="upisiimg" />
+              <div class="okvir">
+                <p>
+                  Početna skupina koja slijedi nakon obuke neplivača.<br />Uče
+                  se osnove plivanja.<br />Javite se trenerici
+                  <strong>Đini</strong> na broj: <br /><strong
+                    >091 111 11</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col span_4_of_12_2">
+            <div class="box">
+              <h3 class="radius">OSTALI</h3>
+              <img src="slike/upisi/ostali.jpg" class="upisiimg" />
+              <div class="okvir">
+                <p>
+                  Za sve ostale informacije vezane o upisima i drugim grupama
+                  javite se na broj <br /><strong>091 111 11</strong>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="col span_8_of_12 povijest-bkg">
+      </div>
+    </section>
+    <!-----------------[ povijest kluba ]----------------->
+
+    <section class="povijest clearfix" id="povijest">
+      <div class="clearfix povijest-xl">
+        <div class="row">
+          <div class="col span_2_of_12">
+            <img src="slike/duje_d_2.jpg" class="draganja" />
+          </div>
+
+          <div class="col span_8_of_12 povijest-bkg">
             <h2>Povijest kluba</h2>
-            <p>Plivački klub ''POŠK'' osnovan je 1937. godine. U 80 godina djelovanja preko 20.000 djece i mladih se kroz različite programe rada u klubu bavilo plivanjem.<br><br>
-Od 2016. godine smo i nastavna baza Kineziološkog fakulteta.
-Najpoznatiji plivači ponikli u našem klubu su svakako Duje Draganja i Đurđica Bijedov koji su jedini hrvatski plivači osvajači medalja na olimpijskim igrama.<br>
-Osim njih svakako treba istaknuti i sestre Luciju i Anu Zaninović, također vrlo uspješne sportašice koje su ponikle u našem klubu ali su svoju punu afirmaciju stekle u taekwondou.<br><br>
-Trenutno PK ima cca 200 članova u svim kategorijama i sekcijama sa kojima rade tri profesionalna trenera kao i desetak stručnih trenera volontera, uglavnom bivših članova kluba koji na taj način daju svoj doprinos i iskazuju ljubav prema klubu i plivanju.
-<br>
-Klub svoju djelatnost obavlja na dvije lokacije – ljeti na otvorenom bazenu POŠK-a na Zenti, a zimi na zatvorenim bazenima JU ŠPORTSKI OBJEKTI na Poljudu. 
-</p>
-        </div>
-        
-        <div class="col span_2_of_12">
-            <img src="slike/durdica_bjedov2.jpg" class="draganja">
-        </div>
-        
-        </div>
-        </div>
-        
-</section>
-<!-----------------[ Treneri ]----------------->
-<section class="treneri clearfix" id="treneri">
-   
-    <div class="row">
-    <h2>Treneri</h2>
-    </div>
-    
-     <div class="treneri-xl1 clearfix">
-       <div class="row">
-           <div class="col span_6_of_12_1">
-           <img src="slike/noimage/jurica_topic.jpg" class="treneri-big">
-           <h3>Jurica Topić</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia neque justo, sed blandit diam venenatis a. Cras magna dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam hendrerit quam at est interdum</p>
-           </div>
-           
-           <div class="col span_6_of_12_1">
-           <img src="slike/noimage/no_picture.jpg" class="treneri-big">
-           <h3>Đina Topić</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia neque justo, sed blandit diam venenatis a. Cras magna dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam hendrerit quam at est interdum</p>
-           </div>   
-       </div>  
-    </div>
-    
-    <div class="treneri-xl clearfix">
-       <div class="row">
-           <div class="col span_4_of_12_1">
-           <img src="slike/noimage/no_picture.jpg" class="treneri-big">
-           <h3>Trener 3</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia neque justo, sed blandit diam venenatis a. Cras magna dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam hendrerit quam at est interdum</p>
-           </div>
-           
-           <div class="col span_4_of_12_1">
-           <img src="slike/noimage/no_picture.jpg" class="treneri-big">
-           <h3>Trener 4</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia neque justo, sed blandit diam venenatis a. Cras magna dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam hendrerit quam at est interdum</p>
-           </div>
-           
-            <div class="col span_4_of_12_1">
-           <img src="slike/noimage/no_picture.jpg" class="treneri-big">
-           <h3>Trener 5</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia neque justo, sed blandit diam venenatis a. Cras magna dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam hendrerit quam at est interdum</p>
-           </div>
-       </div>
-        
-    </div>
-    
-    
-</section>
-<!-----------------[ Obuka neplivaca ]----------------->
-
-<section class="obuka-neplivaca clearfix" id="obuka">
-    <div class="row">
-        <h2>Upisi u tijeku</h2>
-        <p class="pcenter">Poštovani roditelji, Želimo Vas obavijestiti da naš klub i ovo ljeto organizira obuku neplivača po posebnom programu, a pod  nadzorom  iskusnih trenera.Ukoliko želite da Vaše dijete nauči plivati pozivamo Vas na obuku neplivača.</p> <p class="pcenter">Obuka neplivača počinje s radom 18.06.2018. na ljetnom bazenu "POŠK"-a na Zenti. Obuka traje tri tjedna od ponedjeljka do petka u trajanju od jednog sata. Cijena obuke neplivača iznosi 300kn. Drugo dijete iz iste obitelji plaća 50% manju članarinu.
-        </p>
-    </div>
-    <br>
-    <div class="row pleftright clearfix">
-      
-       <div class="col span_4_of_12">
-        <p class="pleft">
-        Upisi se vrše bilo kada u toku dana pozivom na mobitel:
-        <br><br>
-        trenerica <strong>Đina Topić</strong> - 091 111 11 11<br>
-        trenerica <strong>Ivana Vidović</strong> - 091 111 11 11<br><br>
-        i na  ljetnom bazenu "POŠK"-a od 18.06.2018. svakog radnog dana<br>ujutro od
-        08.00 - 10.00 i popodne od 16.00 - 18.00.<br>
-        Detaljnije informacije dobit ćete pri upisu.
+            <p>
+              Plivački klub ''POŠK'' osnovan je 1937. godine. U 80 godina
+              djelovanja preko 20.000 djece i mladih se kroz različite programe
+              rada u klubu bavilo plivanjem.<br /><br />
+              Od 2016. godine smo i nastavna baza Kineziološkog fakulteta.
+              Najpoznatiji plivači ponikli u našem klubu su svakako Duje
+              Draganja i Đurđica Bijedov koji su jedini hrvatski plivači
+              osvajači medalja na olimpijskim igrama.<br />
+              Osim njih svakako treba istaknuti i sestre Luciju i Anu Zaninović,
+              također vrlo uspješne sportašice koje su ponikle u našem klubu ali
+              su svoju punu afirmaciju stekle u taekwondou.<br /><br />
+              Trenutno PK ima cca 200 članova u svim kategorijama i sekcijama sa
+              kojima rade tri profesionalna trenera kao i desetak stručnih
+              trenera volontera, uglavnom bivših članova kluba koji na taj način
+              daju svoj doprinos i iskazuju ljubav prema klubu i plivanju.
+              <br />
+              Klub svoju djelatnost obavlja na dvije lokacije – ljeti na
+              otvorenom bazenu POŠK-a na Zenti, a zimi na zatvorenim bazenima JU
+              ŠPORTSKI OBJEKTI na Poljudu.
             </p>
+          </div>
+
+          <div class="col span_2_of_12">
+            <img src="slike/durdica_bjedov2.jpg" class="draganja" />
+          </div>
         </div>
-        <div class="col span_4_of_12">
-        <p class="pright">
-        <strong>Početak obuke neplivača</strong> <br><br>
-        18.lipnja<br>
-        09.srpnja<br>
-        30.srpnja
+      </div>
+    </section>
+    <!-----------------[ Treneri ]----------------->
+    <section class="treneri clearfix" id="treneri">
+      <div class="row">
+        <h2>Treneri</h2>
+      </div>
+
+      <div class="treneri-xl1 clearfix">
+        <div class="row">
+          <div class="col span_6_of_12_1">
+            <img src="slike/noimage/jurica_topic.jpg" class="treneri-big" />
+            <h3>Jurica Topić</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lacinia neque justo, sed blandit diam venenatis a. Cras magna
+              dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam
+              hendrerit quam at est interdum
+            </p>
+          </div>
+
+          <div class="col span_6_of_12_1">
+            <img src="slike/noimage/no_picture.jpg" class="treneri-big" />
+            <h3>Đina Topić</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lacinia neque justo, sed blandit diam venenatis a. Cras magna
+              dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam
+              hendrerit quam at est interdum
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="treneri-xl clearfix">
+        <div class="row">
+          <div class="col span_4_of_12_1">
+            <img src="slike/noimage/no_picture.jpg" class="treneri-big" />
+            <h3>Trener 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lacinia neque justo, sed blandit diam venenatis a. Cras magna
+              dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam
+              hendrerit quam at est interdum
+            </p>
+          </div>
+
+          <div class="col span_4_of_12_1">
+            <img src="slike/noimage/no_picture.jpg" class="treneri-big" />
+            <h3>Trener 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lacinia neque justo, sed blandit diam venenatis a. Cras magna
+              dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam
+              hendrerit quam at est interdum
+            </p>
+          </div>
+
+          <div class="col span_4_of_12_1">
+            <img src="slike/noimage/no_picture.jpg" class="treneri-big" />
+            <h3>Trener 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lacinia neque justo, sed blandit diam venenatis a. Cras magna
+              dolor, commodo euismod condimentum in, luctus vitae lacus. Etiam
+              hendrerit quam at est interdum
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------[ Obuka neplivaca ]----------------->
+
+    <section class="obuka-neplivaca clearfix" id="obuka">
+      <div class="row">
+        <h2>Upisi u tijeku</h2>
+        <p class="pcenter">
+          Poštovani roditelji, Želimo Vas obavijestiti da naš klub i ovo ljeto
+          organizira obuku neplivača po posebnom programu, a pod nadzorom
+          iskusnih trenera. Ukoliko želite da Vaše dijete nauči plivati pozivamo
+          Vas na obuku neplivača.
+
+          <br /><br />
+          Obuka neplivača počinje s radom 18.06.2018. na ljetnom bazenu "POŠK"-a
+          na Zenti. Obuka traje tri tjedna od ponedjeljka do petka u trajanju od
+          jednog sata. Cijena obuke neplivača iznosi 300kn. Drugo dijete iz iste
+          obitelji plaća 50% manju članarinu.
         </p>
+      </div>
+      <br />
+      <div class="row pleftright clearfix">
+        <div class="col span_4_of_12">
+          <p class="pleft">
+            Upisi se vrše bilo kada u toku dana pozivom na mobitel:
+            <br /><br />
+            <strong>Đina Topić - 091 111 11 11</strong><br />
+            <strong>Ivana Vidović - 091 111 11 11</strong><br /><br />
+            i na ljetnom bazenu "POŠK"-a od 18.06.2018. svakog radnog dana:<br />
+            ujutro od 08.00 - 10.00<br />
+            popodne od 16.00 - 18.00.<br /><br />
+            Detaljnije informacije dobit ćete pri upisu.
+          </p>
         </div>
         <div class="col span_4_of_12">
-        <img src="slike/rukavice_za_plivanje2.png" class="rukavice">
+          <p class="pright">
+            <strong>Početak obuke neplivača</strong> <br /><br />
+            18.lipnja<br />
+            09.srpnja<br />
+            30.srpnja
+          </p>
         </div>
-        
-    
-        
-    </div>
-    
-<div class="row clearfix contactform" >
-    <h3>Upišite dijete preko e-maila</h3><br>
-    <p class="p_upisi">Škola plivanja ili obuka neplivača</p>
-<form id="my_form" onsubmit="submitForm(); return false;">
- 
-  <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Ime roditelja</p><br></div>
-  <div class="col span_8_of_12_2"><input id="n" placeholder="Vaše Ime" required></div>
-  </div>
-  
-  <div class="row clearfix cfmb">
-      <div class="col span_4_of_12"><p>Prezime</p><br></div>
-      <div class="col span_8_of_12_2"><input id="pr" placeholder="Vaše Prezime" required></div>
-    </div>
-  
-  <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Ime djeteta</p><br></div>
-      <div class="col span_8_of_12_2"><input id="id" placeholder="Djetetovo Ime" required></div>
+        <div class="col span_4_of_12">
+          <img src="slike/rukavice_za_plivanje2.png" class="rukavice" />
+        </div>
       </div>
-  
-  <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Godište djeteta</p><br></div>
-      <div class="col span_8_of_12_2"><input id="gd" placeholder="npr. 2012" required></div>
+
+      <div class="row clearfix contactform">
+        <h3>Upišite dijete preko e-maila</h3>
+        <br />
+        <p class="p_upisi">Škola plivanja ili obuka neplivača</p>
+        <form id="my_form" onsubmit="submitForm(); return false;">
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Ime roditelja</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="n" placeholder="Vaše Ime" required />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Prezime</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="pr" placeholder="Vaše Prezime" required />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Ime djeteta</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="id" placeholder="Djetetovo Ime" required />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Godište djeteta</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="gd" placeholder="npr. 2012" required />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Je li dijete plivač ili neplivač ?</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input
+                id="pn"
+                placeholder="napišite plivač / neplivač"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Telefon / Mobitel</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="tel" placeholder="npr. 099113456" required />
+            </div>
+          </div>
+
+          <div class="row clearfix cfmb">
+            <div class="col span_4_of_12">
+              <p>Email</p>
+              <br />
+            </div>
+            <div class="col span_8_of_12_2">
+              <input id="e" placeholder="Vaš email" type="email" required />
+            </div>
+          </div>
+          <div class="row clearfix">
+            <p class="pb10">Napomena</p>
+            <br />
+            <textarea
+              id="m"
+              placeholder="Dodatna napomena...(nije obavezno)"
+              rows="8"
+            ></textarea>
+          </div>
+          <div class="row clearfix">
+            <input id="mybtn" type="submit" value="Pošalji" />
+            <span id="status"></span>
+          </div>
+        </form>
       </div>
-      
-    <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Je li dijete plivač ili neplivač ?</p><br></div>
-      <div class="col span_8_of_12_2"><input id="pn" placeholder="napišite plivač / neplivač" required></div>
+    </section>
+
+    <!-----------------[ Google Karta ]----------------->
+    <section class="google-karta clearfix">
+      <div class="row">
+        <h2>Gdje se nalazimo ?</h2>
       </div>
-  
-  <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Telefon / Mobitel</p><br></div>
-      <div class="col span_8_of_12_2"><input id="tel" placeholder="npr. 099113456" required></div>
+
+      <div class="col row">
+        <div id="map" style="width: 100%; height: 400px"></div>
       </div>
-  
-  <div class="row clearfix cfmb">
-  <div class="col span_4_of_12"><p>Email</p><br></div>
-      <div class="col span_8_of_12_2"><input id="e" placeholder="Vaš email" type="email" required></div>
+    </section>
+
+    <!-----------------[ Galerija ]----------------->
+    <section class="galerija clearfix" id="galerija">
+      <div class="row">
+        <h2>Galerija slika</h2>
       </div>
-   <div class="row clearfix">
-   
-  <p class="pb10">Napomena</p><br>
-<textarea id="m" placeholder="Dodatna napomena...(nije obavezno)" rows="8"></textarea>
-   
-    </div>
-    <div class="row clearfix">
-  <input id="mybtn" type="submit" value="Pošalji"> <span id="status"></span>
-    </div>
-</form>
-    
-</div>
-
-
-
-</section>
-
-
-<!-----------------[ Google Karta ]----------------->
-   <section class="google-karta clearfix">
-   
-    <div class="row">
-    <h2>Gdje se nalazimo ?</h2>
-    </div>
-    
-    
-      
-       <div class="col row">
-           <div id="map" style="width:100%;height:400px"></div>
-       </div>
-    
-
-</section>
-
-
-
-
-
-<!-----------------[ Galerija ]----------------->
-<section class="galerija clearfix" id="galerija">
-   <div class="row">
-       <h2>Galerija slika</h2>
-   </div>
-    <div class="row">
-       
+      <div class="row">
         <div class="col span_6_of_12 posto100 slike">
-            <a href="slike/galerija/backg4.jpg" data-lightbox="roadtrip"><img src="slike/galerija/backg4.jpg"></a>
+          <a href="slike/galerija/backg4.jpg" data-lightbox="roadtrip"
+            ><img src="slike/galerija/backg4.jpg"
+          /></a>
         </div>
-        
-        <div class="col span_3_of_12 posto50 slike">
-            <a href="slike/galerija/neplivac.jpg" data-lightbox="roadtrip"><img src="slike/galerija/neplivac.jpg" alt="neplivac"> </a>
-        </div>
-        
-         <div class="col span_3_of_12 posto50 slike">
-             <a href="slike/galerija/prskanje.jpg" data-lightbox="roadtrip"><img src="slike/galerija/prskanje.jpg" alt="prskanje"> </a>
-        </div>
-        
-        
-        <div class="col span_3_of_12 posto50 slike">
-            <a href="slike/galerija/plivac.jpg" data-lightbox="roadtrip"><img src="slike/galerija/plivac.jpg" alt="plivac"></a>
-        </div>
-        
-        <div class="col span_3_of_12 posto50 slike">
-            <a href="slike/galerija/bomba.jpg" data-lightbox="roadtrip"><img src="slike/galerija/bomba.jpg" alt="bomba"></a>
-        </div>        
-        
-    </div>
-</section>
 
-<!-----------------[ footer ]----------------->
-<footer class="clearfix">
-    <div class="row clearfix">
+        <div class="col span_3_of_12 posto50 slike">
+          <a href="slike/galerija/neplivac.jpg" data-lightbox="roadtrip"
+            ><img src="slike/galerija/neplivac.jpg" alt="neplivac" />
+          </a>
+        </div>
+
+        <div class="col span_3_of_12 posto50 slike">
+          <a href="slike/galerija/prskanje.jpg" data-lightbox="roadtrip"
+            ><img src="slike/galerija/prskanje.jpg" alt="prskanje" />
+          </a>
+        </div>
+
+        <div class="col span_3_of_12 posto50 slike">
+          <a href="slike/galerija/plivac.jpg" data-lightbox="roadtrip"
+            ><img src="slike/galerija/plivac.jpg" alt="plivac"
+          /></a>
+        </div>
+
+        <div class="col span_3_of_12 posto50 slike">
+          <a href="slike/galerija/bomba.jpg" data-lightbox="roadtrip"
+            ><img src="slike/galerija/bomba.jpg" alt="bomba"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------[ footer ]----------------->
+    <footer class="clearfix">
+      <div class="row clearfix">
         <div class="col span_3_of_12_1">
-            <h3>Plivački Klub Pošk</h3>
-            <p>Email : pk_posk@net.hr</p>
-            <p>Tajnica : +385 91 485 2264</p>
-            <p>Rezultati : <a href="http://www.hrvatski-plivacki-savez.hr/" class="rezultati">hrvatski plivacki savez</a></p>
+          <h3>Plivački Klub Pošk</h3>
+          <p>Email : pk_posk@net.hr</p>
+          <p>Tajnica : +385 91 485 2264</p>
+          <p>
+            Rezultati :
+            <a href="http://www.hrvatski-plivacki-savez.hr/" class="rezultati"
+              >hrvatski plivacki savez</a
+            >
+          </p>
         </div>
         <div class="col span_3_of_12_1">
-            <h3>Pratite nas</h3>
-            <p><a href="https://www.facebook.com/Pliva%C4%8Dki-Klub-Po%C5%A1k-741343775971604/" class="social-media-a"><i class="ion-social-facebook" ></i>Facebook</a><br>
-            <a href="https://www.instagram.com/posk1937/?hl=hr" class="social-media-a"><i class="ion-social-instagram"></i>Instagram</a></p>
+          <h3>Pratite nas</h3>
+          <p>
+            <a
+              href="https://www.facebook.com/Pliva%C4%8Dki-Klub-Po%C5%A1k-741343775971604/"
+              class="social-media-a"
+              ><i class="ion-social-facebook"></i>Facebook</a
+            ><br />
+            <a
+              href="https://www.instagram.com/posk1937/?hl=hr"
+              class="social-media-a"
+              ><i class="ion-social-instagram"></i>Instagram</a
+            >
+          </p>
         </div>
         <div class="col span_3_of_12_1">
-            <h3>Adresa</h3>
-            <p>Uvala Zenta 3, 21000 Split<br>
-            8 Mediteranskih Igara 2, 21000, Split</p>
+          <h3>Adresa</h3>
+          <p>
+            Uvala Zenta 3, 21000 Split<br />
+            8 Mediteranskih Igara 2, 21000, Split
+          </p>
         </div>
         <div class="col span_3_of_12_1">
-            <h3>OIB i Žiro račun</h3>
-            <p>OIB : 1111111111</p>
-            <p>Žiro račun : 1111111-1111111</p>
+          <h3>OIB i Žiro račun</h3>
+          <p>OIB : 1111111111</p>
+          <p>Žiro račun : 1111111-1111111</p>
         </div>
-    </div>
-   
-</footer>
-<section class="copyright clearfix">
- <div class="row">
+      </div>
+    </footer>
+    <section class="copyright clearfix">
+      <div class="row">
         <p>Copyright &copy; Plivački klub Pošk</p>
-    </div>
-</section>
-<!-----------------[ script ]----------------->
+      </div>
+    </section>
+    <!-----------------[ script ]----------------->
 
-
- <script>
+    <script>
       function initMap() {
-        var uluru = {lat: 43.500132, lng: 16.456316};
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var uluru = { lat: 43.500132, lng: 16.456316 };
+        var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 15,
-          center: uluru
+          center: uluru,
         });
         var marker = new google.maps.Marker({
           position: uluru,
-          map: map
+          map: map,
         });
       }
-     
-
-    </script>
-     
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYFMUqkTgPZRPwOsiISUmN8yKr1_-JElg&callback=initMap">
-    </script>
-    
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/navbar-fixed.js"></script>
-<script src="lightbox2-master/dist/js/lightbox.js"></script>
-
-<script>
-         
-     $(document).ready(function (){
-  $(".menu-icon").on("click", function() {
-    $("nav ul").toggleClass("showing");
-  });
-});
-    
-    $(document).ready(function (){
-  $("nav ul").on("click", function() {
-    $("nav ul").toggleClass("showing");
-  });
-});
-
-//Scrolling Effect for nav
-$(window).on("scroll", function() {
-  if($(window).scrollTop()) {
-    $('nav').addClass('black');
-  } else {
-    $('nav').removeClass('black');
-  }
-});
     </script>
 
-</body>
-    
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYFMUqkTgPZRPwOsiISUmN8yKr1_-JElg&callback=initMap"
+    ></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/navbar-fixed.js"></script>
+    <script src="lightbox2-master/dist/js/lightbox.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-icon").on("click", function () {
+          $("nav ul").toggleClass("showing");
+        });
+      });
+
+      $(document).ready(function () {
+        $("nav ul").on("click", function () {
+          $("nav ul").toggleClass("showing");
+        });
+      });
+
+      //Scrolling Effect for nav
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+  </body>
 </html>

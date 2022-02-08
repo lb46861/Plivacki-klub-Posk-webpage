@@ -1,7 +1,7 @@
 /*--- [ navigation ] ---*/
 @media (max-width: 950px) {
   .cool-link::after {
-    content: '';
+    content: "";
     display: none;
     width: 0;
     height: 0px;
@@ -13,36 +13,35 @@
     margin-top: 0;
     margin-left: 20px;
   }
-  .logo img{
-        width: 60px;
-        height: auto;
-
-    }
-  .logo p{
-    display:block;
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+  .logo p {
+    display: block;
     margin-top: 16px;
   }
-  
+
   nav ul {
     padding-right: 0;
     max-height: 0px;
     background: rgba(0, 0, 0, 0.7);
   }
-  
+
   nav.black ul {
     background: rgba(0, 0, 0, 0.8);
   }
-    nav.black ul li{
+  nav.black ul li {
     padding-bottom: 20px;
     padding-top: 20px;
-}
-    nav.black .logo p{
+  }
+  nav.black .logo p {
     color: #fff;
   }
-    nav.black ul li a{
+  nav.black ul li a {
     color: #fff;
-}
-  
+  }
+
   .showing {
     max-height: 620px;
   }
@@ -55,321 +54,300 @@
     text-align: center;
     border-bottom: 1px solid #fff;
   }
-  nav ul li:last-child{
-    border-bottom:none;
+  nav ul li:last-child {
+    border-bottom: none;
   }
   nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 20px;
-      transition: all 0.3s linear;
-
-}
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s linear;
+  }
   nav ul li a:hover {
-      color: gold;
+    color: gold;
+  }
 
-}
-  
   .menu-icon {
     display: block;
-      font-size: 150%
+    font-size: 150%;
   }
 }
 
 /*--- [ povijest section ] ---*/
-@media (max-width: 1860px){
-    .span_8_of_12{
-        width: 100%;
-    }
-    .span_2_of_12{
-        display: none;
-    }
-    .povijest p{
-        padding: 40px 5%;
-        text-align: justify;
-
-}
+@media (max-width: 1860px) {
+  .span_8_of_12 {
+    width: 100%;
+  }
+  .span_2_of_12 {
+    display: none;
+  }
+  .povijest p {
+    padding: 40px 5%;
+    text-align: justify;
+  }
 }
 
 /*--- [ tablet ] ---*/
-@media only screen and (min-width:769px) and (max-width:1200px){
-    /*--- [ header ] ---*/
-    header{
-        padding: 30% 0;
-    }
-    
-   
-    /*--- [ upisi ] ---*/
-    .upisi-xl{
-    padding:30px 0% 30px;
-    }
-    .span_4_of_12_2 {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  /*--- [ header ] ---*/
+  header {
+    padding: 30% 0;
+  }
+
+  /*--- [ upisi ] ---*/
+  .upisi-xl {
+    padding: 30px 0% 30px;
+  }
+  .span_4_of_12_2 {
     padding: 0 5px;
-    }
-    .box .okvir p{
-	font-size:16px;
+  }
+  .box .okvir p {
+    font-size: 16px;
     padding: 7px 7px;
     line-height: 18px;
-    }
-    .upisi h2::after{
+  }
+  .upisi h2::after {
     width: 40px;
-    }
-    
-    /*--- [ povijest ] ---*/
-    .povijest h2::after{
-        width: 40px;
-    }
-    
-    /*---[ google] ---*/
-    .google-karta h2::after{
+  }
+
+  /*--- [ povijest ] ---*/
+  .povijest h2::after {
     width: 40px;
-    }
-   
-    
-    /*--- [ treneri ] ---*/
-    .treneri h2::after{
+  }
+
+  /*---[ google] ---*/
+  .google-karta h2::after {
     width: 40px;
-    }
-    .treneri-xl{
+  }
+
+  /*--- [ treneri ] ---*/
+  .treneri h2::after {
+    width: 40px;
+  }
+  .treneri-xl {
     width: 100%;
     height: auto;
-    padding:40px 0 80px;
-    }
-    .treneri-xl1{
+    padding: 40px 0 80px;
+  }
+  .treneri-xl1 {
     width: 100%;
     height: auto;
     margin: 0 auto;
-     padding:80px 0 40px;
-    }
-    .treneri p{
+    padding: 80px 0 40px;
+  }
+  .treneri p {
     width: 80%;
     margin: 0 auto;
     font-size: 18px;
     line-height: 20px;
-    }
-    
-    
-    /*--- [ obuka_neplivaca ] ---*/
-    .contactform{
+  }
+
+  /*--- [ obuka_neplivaca ] ---*/
+  .contactform {
     width: 90%;
-    }
-    .contactform p{
+  }
+  .contactform p {
     color: #f4f4f4;
     font-size: 24px;
-    }
-    .pcenter{
+  }
+  .pcenter {
     width: 90%;
     font-size: 18px;
     line-height: 22px;
     text-align: left;
-    }
-    .pleft{
+  }
+  .pleft {
     font-size: 18px;
     line-height: 22px;
-    }
-    .pright{
+  }
+  .pright {
     font-size: 18px;
     line-height: 26px;
-    }
-    .pleftright{
+  }
+  .pleftright {
     width: 90%;
-    padding: 20px 0;
-    }
-    .obuka-neplivaca h2::after{
+  }
+  .obuka-neplivaca h2::after {
     width: 50px;
-    }
-    
-    /*--- [ galerija ] ---*/
-    .galerija h2::after{
-        width: 35px;
-    }
-    
-    /*--- [ footer ] ---*/
-    footer{
-        padding: 20px 5%;
-    }
-    .span_3_of_12_1{
-        width: 50%;
-        padding: 20px 0;
-    }
-    footer h3{
+  }
+
+  /*--- [ galerija ] ---*/
+  .galerija h2::after {
+    width: 35px;
+  }
+
+  /*--- [ footer ] ---*/
+  footer {
+    padding: 20px 5%;
+  }
+  .span_3_of_12_1 {
+    width: 50%;
+    padding: 20px 0;
+  }
+  footer h3 {
     margin-bottom: 10px;
-    }
+  }
 }
 
 /*--- [ mobile phone ] ---*/
 @media screen and (max-width: 768px) {
-    /*--- [ header ] ---*/
-    header{
+  /*--- [ header ] ---*/
+  header {
     padding: 60% 0;
-    }
-    .naslov h1{
-    font-size: 40px;  
-    }
-    .naslov h2{
-        font-size: 25px;
-    }
-    .botun:link,
-    .botun:visited{
+  }
+  .naslov h1 {
+    font-size: 40px;
+  }
+  .naslov h2 {
+    font-size: 25px;
+  }
+  .botun:link,
+  .botun:visited {
     width: 160px;
     font-size: 18px;
     font-weight: 400;
-    }
-    
-    
-    
-    /*--- [ upisi ] ---*/
-    .upisi-xl{
-    padding:30px 0% 60px;
-    }
-     .span_4_of_12_2 {
+  }
+
+  /*--- [ upisi ] ---*/
+  .upisi-xl {
+    padding: 30px 0% 60px;
+  }
+  .span_4_of_12_2 {
     padding: 15px 20px;
-    }
-    .upisi h2{
+  }
+  .upisi h2 {
     font-size: 35px;
-    }
-    .upisi h2::after{
+  }
+  .upisi h2::after {
     width: 35px;
     margin: 20px auto 0;
     height: 2px;
-    }
-    .box .okvir{
+  }
+  .box .okvir {
     margin-bottom: -39px;
-    }
-    .upisi h3{
-        font-size: 25px;
-    }
-    
-    
-    /*--- [ treneri ] ---*/
-    .treneri-xl{
+  }
+  .upisi h3 {
+    font-size: 25px;
+  }
+
+  /*--- [ treneri ] ---*/
+  .treneri-xl {
     width: 100%;
     height: auto;
-    padding:0 0 40px;
-    }
-    .treneri-xl1{
+    padding: 0 0 40px;
+  }
+  .treneri-xl1 {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding:40px 0 0;
-    }
-    .treneri p{
+    padding: 40px 0 0;
+  }
+  .treneri p {
     width: 85%;
     margin: 0 auto;
     font-size: 18px;
     line-height: 20px;
     font-size: 18px;
     line-height: 20px;
-    }
-    .span_4_of_12_1{
-        padding: 40px 0;
-    }
-    .span_6_of_12_1{
-        padding: 40px 0;
-    }
-    .treneri h2::after{
+  }
+  .span_4_of_12_1 {
+    padding: 40px 0;
+  }
+  .span_6_of_12_1 {
+    padding: 40px 0;
+  }
+  .treneri h2::after {
     width: 30px;
     margin: 20px auto 0;
     height: 2px;
-    }
-    .treneri h2{
-        font-size: 35px;
-    }
-    .treneri h3{
-        font-size: 22px;
-        font-weight: 400;
-    }
-    
-    
-    
-    /*--- [ povijest ] ---*/
-    .povijest h2::after{
-        width: 40px;
-    }
-    .povijest h2{
-        font-size: 35px;
-        margin-bottom: 10px;
-    }
-    .povijest p{
-        text-align: left;
-    }
-    
-    
-    /*--- [ obuka_neplivaca ] ---*/
-    .contactform{
+  }
+  .treneri h2 {
+    font-size: 35px;
+  }
+  .treneri h3 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  /*--- [ povijest ] ---*/
+  .povijest h2::after {
+    width: 40px;
+  }
+  .povijest h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .povijest p {
+    text-align: left;
+  }
+
+  /*--- [ obuka_neplivaca ] ---*/
+  .contactform {
     width: 90%;
-    }
-    .contactform p{
+  }
+  .contactform p {
     color: #f4f4f4;
     font-size: 24px;
-    }
-    .pcenter{
+  }
+  .pcenter {
     width: 90%;
     font-size: 18px;
     line-height: 22px;
     text-align: left;
-    }
-    .pleft{
+  }
+  .pleft {
     font-size: 18px;
     line-height: 22px;
-    }
-    .pright{
+  }
+  .pright {
     font-size: 18px;
     line-height: 26px;
     padding: 60px 0 0 0;
-    }
-    .pleftright{
+  }
+  .pleftright {
     width: 90%;
-    padding: 20px 0;
-    }
-    .obuka-neplivaca h2::after{
+  }
+  .obuka-neplivaca h2::after {
     width: 40px;
-    }
-    .obuka-neplivaca h2{
+  }
+  .obuka-neplivaca h2 {
     font-size: 35px;
     margin-bottom: 40px;
-    }
-    .obuka-neplivaca h3{
-        font-size: 27px;
-    }
-    .rukavice{
+  }
+  .obuka-neplivaca h3 {
+    font-size: 27px;
+  }
+  .rukavice {
     display: none;
-    }
-    .contactform p{
+  }
+  .contactform p {
     font-size: 18px;
-    }
-    
-    
-    
-    /*--- [ google_karta ] ---*/
-    .google-karta h2::after{
+  }
+
+  /*--- [ google_karta ] ---*/
+  .google-karta h2::after {
     width: 40px;
-    }
-    .google-karta h2{
-    font-size: 35px;  
-    }
-    
-    
-    
-    /*--- [ galerija ] ---*/
-    .galerija h2::after{
-        width: 35px;
-    }
-    .galerija h2{
-        font-size: 35px;
-    }
-    
-    
-    
-    
-    /*--- [ footer ] ---*/
-    footer{
-        padding: 20px 5%;
-    }
-    .span_3_of_12_1{
-        padding: 20px 0;
-    }
-    footer h3{
+  }
+  .google-karta h2 {
+    font-size: 35px;
+  }
+
+  /*--- [ galerija ] ---*/
+  .galerija h2::after {
+    width: 35px;
+  }
+  .galerija h2 {
+    font-size: 35px;
+  }
+
+  /*--- [ footer ] ---*/
+  footer {
+    padding: 20px 5%;
+  }
+  .span_3_of_12_1 {
+    padding: 20px 0;
+  }
+  footer h3 {
     margin-bottom: 10px;
-    }
+  }
 }

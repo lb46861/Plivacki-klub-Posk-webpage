@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  color: #fff;
 }
 html {
   background-color: #fff;
@@ -332,7 +331,7 @@ header h1{
 
 .upisi {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(slike/treneri/treneri-bkg.jpg);
+    url(slike/treneri/treneri-bkg1.jpg);
   height: auto;
   background-size: cover;
   background-position: center;

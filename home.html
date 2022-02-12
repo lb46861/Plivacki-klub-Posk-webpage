@@ -10,29 +10,19 @@
     <link href="css/grid.css" rel="stylesheet" type="text/css" />
     <link href="stil.css" rel="stylesheet" type="text/css" />
     <link href="mediaq.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext,vietnamese"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400&amp;subset=greek,greek-ext,latin-ext,vietnamese"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&amp;subset=latin-ext"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=greek,greek-ext,latin-ext,vietnamese"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,400i&amp;subset=latin-ext,vietnamese"
-      rel="stylesheet"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300&display=swap"
       rel="stylesheet"
@@ -41,7 +31,7 @@
     <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet" />
 
     <!--[ contact form script ]-->
-    <script>
+    <!-- <script> 
       function _(id) {
         return document.getElementById(id);
       }
@@ -74,7 +64,7 @@
         };
         ajax.send(formdata);
       }
-    </script>
+    </script> -->
   </head>
   <body id="pocetna">
     <!-----------------[ header]----------------->
@@ -316,14 +306,23 @@
         <h3>Upišite dijete preko e-maila</h3>
         <br />
         <p class="p_upisi">Škola plivanja ili obuka neplivača</p>
-        <form id="my_form" onsubmit="submitForm(); return false;">
+        <form
+          action="https://formsubmit.co/826b11353b01981dd01fd1164fe42dbe "
+          method="POST"
+        >
           <div class="row clearfix cfmb">
             <div class="col span_4_of_12">
               <p>Ime roditelja</p>
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="n" placeholder="Vaše Ime" required />
+              <input
+                type="text"
+                name="Ime"
+                id="n"
+                placeholder="Vaše Ime"
+                required
+              />
             </div>
           </div>
 
@@ -333,7 +332,13 @@
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="pr" placeholder="Vaše Prezime" required />
+              <input
+                type="text"
+                name="Prezime"
+                id="pr"
+                placeholder="Vaše Prezime"
+                required
+              />
             </div>
           </div>
 
@@ -343,7 +348,13 @@
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="id" placeholder="Djetetovo Ime" required />
+              <input
+                name="Ime djeteta"
+                type="text"
+                id="id"
+                placeholder="Djetetovo Ime"
+                required
+              />
             </div>
           </div>
 
@@ -353,7 +364,13 @@
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="gd" placeholder="npr. 2012" required />
+              <input
+                name="Godiste djeteta"
+                type="number"
+                id="gd"
+                placeholder="npr. 2012"
+                required
+              />
             </div>
           </div>
 
@@ -364,6 +381,8 @@
             </div>
             <div class="col span_8_of_12_2">
               <input
+                name="plivac/neplivac"
+                type="text"
                 id="pn"
                 placeholder="napišite plivač / neplivač"
                 required
@@ -377,7 +396,13 @@
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="tel" placeholder="npr. 099113456" required />
+              <input
+                name="Mobitel"
+                type="tel"
+                id="tel"
+                placeholder="npr. 099113456"
+                required
+              />
             </div>
           </div>
 
@@ -387,13 +412,21 @@
               <br />
             </div>
             <div class="col span_8_of_12_2">
-              <input id="e" placeholder="Vaš email" type="email" required />
+              <input
+                name="email"
+                type="email"
+                id="e"
+                placeholder="Vaš email"
+                required
+              />
             </div>
           </div>
           <div class="row clearfix">
             <p class="pb10">Napomena</p>
             <br />
             <textarea
+              name="Napomena"
+              type="text"
               id="m"
               placeholder="Dodatna napomena...(nije obavezno)"
               rows="8"

@@ -8,7 +8,7 @@ if( isset($_POST['n']) && isset($_POST['pr']) && isset($_POST['id']) && isset($_
     $tel = $_POST['tel'];
     $e = $_POST['e'];
 	$m = nl2br($_POST['m']);
-	$to = "pk_posk@net.hr";	
+	$to = "begovic.lovre@gmail.com";	
 	$from = $e;
 	$subject = 'Contact Form Message';
 	$message = '
